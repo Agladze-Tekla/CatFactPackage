@@ -13,7 +13,7 @@ final public class NetworkManager {
     private let limit = "332"
     private let maxFact = "facts?limit="
     
-    private init() {}
+    public init() {}
     
     func fetchFacts(completion: @escaping (Result<[CatFacts], Error>) -> Void) {
         let urlStr = "\(baseURL)\(maxFact)\(limit)"
