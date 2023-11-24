@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol CatFactsViewModelDelegate: AnyObject {
+public protocol CatFactsViewModelDelegate: AnyObject {
     func factsFetched(_ facts: [CatFacts])
     func showError(_ error: Error)
 }
 
 final public class CatFactsViewModel {
     
-    weak var delegate: CatFactsViewModelDelegate?
+    public weak var delegate: CatFactsViewModelDelegate?
     
     public var facts: [CatFacts]?
     
