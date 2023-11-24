@@ -20,7 +20,7 @@ final public class CatFactsViewModel {
     
     public init() {}
     
-    func viewDidLoad() {
+    public func viewDidLoad() {
         fetchFacts()
     }
     
