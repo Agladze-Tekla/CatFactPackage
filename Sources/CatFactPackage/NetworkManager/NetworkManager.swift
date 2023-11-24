@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NetworkManager {
+final public class NetworkManager {
     static let shared = NetworkManager()
     private let baseURL = "https://catfact.ninja/"
     private let limit = "332"
