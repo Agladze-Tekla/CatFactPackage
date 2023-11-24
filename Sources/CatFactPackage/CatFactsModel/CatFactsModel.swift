@@ -9,11 +9,11 @@ import Foundation
 
 import Foundation
 
-struct FactResults: Decodable {
+public struct FactResults: Decodable {
     let data: [CatFacts]
 }
 
-struct CatFacts: Decodable {
+public struct CatFacts: Decodable {
     let fact: String
     let length: Int
     
