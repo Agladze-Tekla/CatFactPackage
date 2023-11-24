@@ -18,6 +18,8 @@ final public class CatFactsViewModel {
     
     public var facts: [CatFacts]?
     
+    public init() {}
+    
     func viewDidLoad() {
         fetchFacts()
     }
