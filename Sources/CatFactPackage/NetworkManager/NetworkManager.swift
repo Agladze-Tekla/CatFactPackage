@@ -15,7 +15,7 @@ final public class NetworkManager {
     
     public init() {}
     
-    func fetchFacts(completion: @escaping (Result<[CatFacts], Error>) -> Void) {
+    public func fetchFacts(completion: @escaping (Result<[CatFacts], Error>) -> Void) {
         let urlStr = "\(baseURL)\(maxFact)\(limit)"
         
         guard let url = URL(string: urlStr) else {
