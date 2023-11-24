@@ -10,11 +10,11 @@ import Foundation
 import Foundation
 
 public struct FactResults: Decodable {
-    let data: [CatFacts]
+    public let data: [CatFacts]
 }
 
 public struct CatFacts: Decodable {
-    let fact: String
+    public let fact: String
     let length: Int
     
     enum CodingKeys: String, CodingKey{
