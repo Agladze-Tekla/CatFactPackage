@@ -15,8 +15,8 @@ protocol CatFactsViewModelDelegate: AnyObject {
 final public class CatFactsViewModel {
     
     weak var delegate: CatFactsViewModelDelegate?
-
-    private var facts: [CatFacts]?
+    
+    public var facts: [CatFacts]?
     
     func viewDidLoad() {
         fetchFacts()
@@ -24,12 +24,12 @@ final public class CatFactsViewModel {
     
     private func fetchFacts() {
         NetworkManager.shared.fetchFacts { [weak self] result in
-               switch result {
-               case .success(let facts):
+            switch result {
+            case .success(let facts):
                 self?.facts = facts
                 self?.delegate?.factsFetched(facts)
-               case .failure(_):
-                   break
-               }
-           }
-       }}
+            case .failure(_):
+                break
+            }
+        }
+    }}
